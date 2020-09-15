@@ -1,12 +1,15 @@
-type Person {
+type Movie {
     id: Int!
     name: String!
-    age: Int!
-    gender: String!
+    score: Int!
+    
 }
 
 type Query{
-    people: [Person]!     # person array로 보낸다
-    person(id: Int!): Person 
+    movies: [Movie]!     # person array로 보낸다
+    movie(id: Int!): Movie 
 }
 
+type Mutation {
+    addMovie(name: String!, score: Int!): Movie!  #Movie를 리턴하겠음 
+}
